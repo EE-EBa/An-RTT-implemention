@@ -1,0 +1,21 @@
+[package]
+name = "rtt_prints"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m-rt = "0.7.5"
+panic-halt = "1.0.0"
+rtt-target = "0.5"
+cortex-m = {version = "0.7.7",features = ["critical-section-single-core"]}
+
+
+[build-dependencies]
+cc = "1.0"
+
+[[bin]]
+name = "rtt_prints"
+test = false
+bench = false
+
+
