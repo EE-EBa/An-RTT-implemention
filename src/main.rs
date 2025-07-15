@@ -4,7 +4,6 @@
 
 mod board;
 mod gpio;
-mod itm_debug;
 mod led;
 mod mcu;
 mod reg;
@@ -25,6 +24,8 @@ fn main() -> ! {
     let mut peripherals = Peripherals::take().unwrap();
     systick_init(&mut peripherals.SYST, 2);
 
+    let a = 1;
+    rtt_target::rprintln!("a is {}",a);
     loop {
         rtt_target::rprintln!("hello,from main!");
     }
